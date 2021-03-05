@@ -1,5 +1,8 @@
 package cc.peripherals;
 
+import cc.Term.TerminalPosition;
+import cc.Term.TerminalSize;
+
 extern class Printer {
     function write(text:String):Void;
     function getCursorPos():TerminalPosition;
