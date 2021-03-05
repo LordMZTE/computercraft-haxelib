@@ -4,52 +4,52 @@ import cc.Colors;
 
 @:multiReturn
 extern class TerminalPosition {
-	public var x: Int;
-	public var y: Int;
+	var x:Int;
+	var y:Int;
 }
 
 @:multiReturn
 extern class TerminalSize {
-	public var width: Int;
-	public var height: Int;
+	var width:Int;
+	var height:Int;
 }
 
 @:luaDotMethod
 extern class TerminalObject {
-	public function write(text: String): Void;
-	public function blit(text: String, colors: String, background: String): Void;
-	public function clear(): Void;
-	public function clearLine(): Void;
-	public function getCursorPos(): TerminalPosition;
-	public function setCursorPos(x: Int, y: Int): Void;
-	public function setCursorBlink(value: Bool): Void;
-	public function isColor(): Bool;
-	public function getSize(): TerminalSize;
-	public function scroll(lines: Int): Void;
-	public function setTextColor(color: Color): Void;
-	public function getTextColor(): Color;
-	public function setBackgroundColor(color: Color): Void;
-	public function getBackgroundColor(): Color;
+	function write(text:String):Void;
+	function blit(text:String, colors:String, background:String):Void;
+	function clear():Void;
+	function clearLine():Void;
+	function getCursorPos():TerminalPosition;
+	function setCursorPos(x:Int, y:Int):Void;
+	function setCursorBlink(value:Bool):Void;
+	function isColor():Bool;
+	function getSize():TerminalSize;
+	function scroll(lines:Int):Void;
+	function setTextColor(color:Color):Void;
+	function getTextColor():Color;
+	function setBackgroundColor(color:Color):Void;
+	function getBackgroundColor():Color;
 }
 
 @:native("term")
 extern class Term {
-	public static function write(text: String): Void;
-	public static function blit(text: String, colors: String, background: String): Void;
-	public static function clear(): Void;
-	public static function clearLine(): Void;
-	public static function getCursorPos(): TerminalPosition;
-	public static function setCursorPos(x: Int, y: Int): Void;
-	public static function setCursorBlink(value: Bool): Void;
-	public static function isColor(): Bool;
-	public static function getSize(): TerminalSize;
-	public static function scroll(lines: Int): Void;
-	public static function setTextColor(color: Color): Void;
-	public static function getTextColor(): Color;
-	public static function setBackgroundColor(color: Color): Void;
-	public static function getBackgroundColor(): Color;
+	static function write(text:String):Void;
+	static function blit(text:String, colors:String, background:String):Void;
+	static function clear():Void;
+	static function clearLine():Void;
+	static function getCursorPos():TerminalPosition;
+	static function setCursorPos(x:Int, y:Int):Void;
+	static function setCursorBlink(value:Bool):Void;
+	static function isColor():Bool;
+	static function getSize():TerminalSize;
+	static function scroll(lines:Int):Void;
+	static function setTextColor(color:Color):Void;
+	static function getTextColor():Color;
+	static function setBackgroundColor(color:Color):Void;
+	static function getBackgroundColor():Color;
 
-	public static function redirect(target: TerminalObject): TerminalObject;
-	public static function current(): TerminalObject;
-	public static function native(): TerminalObject;
+	static function redirect(target:TerminalObject):TerminalObject;
+	static function current():TerminalObject;
+	static function native():TerminalObject;
 }

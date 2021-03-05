@@ -5,15 +5,15 @@ import cc.Colors;
 
 @:native("redstone")
 extern class Redstone {
-	public static function getSides(): Table<Int, String>;
-	public static function getInput(side: String): Bool;
-	public static function setOutput(side: String, state: Bool): Void;
-	public static function getOutput(side: String): Bool;
-	public static function getAnalogInput(side: String): Int;
-	public static function setAnalogOutput(side: String, strength: Int): Void;
-	public static function getAnalogOutput(side: String): Int;
-	public static function getBundledInput(side: String): Color;
-	public static function setBundledOutput(side: String, state: Color): Void;
-	public static function getBundledOutput(side: String): Color;
-	public static function testBundledInput(side: String, value: Color): Bool;
+	static function getSides():Table<Int, String>;
+	static function getInput(side:String):Bool;
+	static function setOutput(side:String, state:Bool):Void;
+	static function getOutput(side:String):Bool;
+	static function getAnalogInput(side:String):Int;
+	static function setAnalogOutput(side:String, strength:Int):Void;
+	static function getAnalogOutput(side:String):Int;
+	static function getBundledInput(side:String):Color;
+	static function setBundledOutput(side:String, state:Color):Void;
+	static function getBundledOutput(side:String):Color;
+	static function testBundledInput(side:String, value:Color):Bool;
 }

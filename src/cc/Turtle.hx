@@ -4,71 +4,71 @@ import haxe.extern.EitherType;
 
 @:multiReturn
 extern class TurtleActionResult {
-	public var successful: Bool;
-	public var error: String;
+	var successful:Bool;
+	var error:String;
 }
 
 extern class TurtleItemDetail {
-	public var name: String;
-	public var damage: Int;
-	public var count: Int;
+	var name:String;
+	var damage:Int;
+	var count:Int;
 }
 
 extern class TurtleBlockDetail {
-	public var name: String;
-	public var metadata: Int;
-	public var state: Dynamic;
+	var name:String;
+	var metadata:Int;
+	var state:Dynamic;
 }
 
 @:multiReturn
 extern class TurtleInspectResult {
-	public var successful: Bool;
-	public var result: EitherType<String, TurtleBlockDetail>;
+	var successful:Bool;
+	var result:EitherType<String, TurtleBlockDetail>;
 }
 
 @:native("turtle")
 extern class Turtle {
-	public static function craft(qty: Int): TurtleActionResult;
-	public static function forward(): TurtleActionResult;
-	public static function back(): TurtleActionResult;
-	public static function up(): TurtleActionResult;
-	public static function down(): TurtleActionResult;
-	public static function turnLeft(): TurtleActionResult;
-	public static function turnRight(): TurtleActionResult;
-	public static function select(slot: Int): Bool;
-	public static function getSelectedSlot(): Int;
-	public static function getItemCount(?slot: Int): Int;
-	public static function getItemSpace(?slot: Int): Int;
-	public static function getItemDetail(?slot: Int): TurtleItemDetail;
-	public static function equipLeft(): TurtleActionResult;
-	public static function equipRight(): TurtleActionResult;
-	public static function attack(): TurtleActionResult;
-	public static function attackUp(): TurtleActionResult;
-	public static function attackDown(): TurtleActionResult;
-	public static function dig(): TurtleActionResult;
-	public static function digUp(): TurtleActionResult;
-	public static function digDown(): TurtleActionResult;
-	public static function place(?signText: String): TurtleActionResult;
-	public static function placeUp(): TurtleActionResult;
-	public static function placeDown(): TurtleActionResult;
-	public static function detect(): Bool;
-	public static function detectUp(): Bool;
-	public static function detectDown(): Bool;
-	public static function inspect(): TurtleInspectResult;
-	public static function inspectUp(): TurtleInspectResult;
-	public static function inspectDown(): TurtleInspectResult;
-	public static function compare(): Bool;
-	public static function compareUp(): Bool;
-	public static function compareDown(): Bool;
-	public static function compareTo(slot: Int): Bool;
-	public static function drop(?count: Int): TurtleActionResult;
-	public static function dropUp(?count: Int): TurtleActionResult;
-	public static function dropDown(?count: Int): TurtleActionResult;
-	public static function suck(?amount: Int): TurtleActionResult;
-	public static function suckUp(?amount: Int): TurtleActionResult;
-	public static function suckDown(?amount: Int): TurtleActionResult;
-	public static function refuel(?qty: Int): TurtleActionResult;
-	public static function getFuelLevel(): Int;
-	public static function getFuelLimit(): Int;
-	public static function transferTo(to: Int, ?qty: Int): Bool;
+	static function craft(qty:Int):TurtleActionResult;
+	static function forward():TurtleActionResult;
+	static function back():TurtleActionResult;
+	static function up():TurtleActionResult;
+	static function down():TurtleActionResult;
+	static function turnLeft():TurtleActionResult;
+	static function turnRight():TurtleActionResult;
+	static function select(slot:Int):Bool;
+	static function getSelectedSlot():Int;
+	static function getItemCount(?slot:Int):Int;
+	static function getItemSpace(?slot:Int):Int;
+	static function getItemDetail(?slot:Int):TurtleItemDetail;
+	static function equipLeft():TurtleActionResult;
+	static function equipRight():TurtleActionResult;
+	static function attack():TurtleActionResult;
+	static function attackUp():TurtleActionResult;
+	static function attackDown():TurtleActionResult;
+	static function dig():TurtleActionResult;
+	static function digUp():TurtleActionResult;
+	static function digDown():TurtleActionResult;
+	static function place(?signText:String):TurtleActionResult;
+	static function placeUp():TurtleActionResult;
+	static function placeDown():TurtleActionResult;
+	static function detect():Bool;
+	static function detectUp():Bool;
+	static function detectDown():Bool;
+	static function inspect():TurtleInspectResult;
+	static function inspectUp():TurtleInspectResult;
+	static function inspectDown():TurtleInspectResult;
+	static function compare():Bool;
+	static function compareUp():Bool;
+	static function compareDown():Bool;
+	static function compareTo(slot:Int):Bool;
+	static function drop(?count:Int):TurtleActionResult;
+	static function dropUp(?count:Int):TurtleActionResult;
+	static function dropDown(?count:Int):TurtleActionResult;
+	static function suck(?amount:Int):TurtleActionResult;
+	static function suckUp(?amount:Int):TurtleActionResult;
+	static function suckDown(?amount:Int):TurtleActionResult;
+	static function refuel(?qty:Int):TurtleActionResult;
+	static function getFuelLevel():Int;
+	static function getFuelLimit():Int;
+	static function transferTo(to:Int, ?qty:Int):Bool;
 }

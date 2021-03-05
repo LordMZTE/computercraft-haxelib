@@ -11,30 +11,30 @@ abstract OpenFileMode(String) {
 
 @:luaDotMethod
 extern class FileHandle {
-	public function close(): Void;
-	public function readLine(): String;
-	public function readAll(): String;
-	public function write(data: String): Void;
-	public function writeLine(data: String): Void;
-	public function flush(): Void;
+	function close():Void;
+	function readLine():String;
+	function readAll():String;
+	function write(data:String):Void;
+	function writeLine(data:String):Void;
+	function flush():Void;
 }
 
 @:native("fs")
 extern class FileSystem {
-	public static function list(path: String): Table<Int, String>;
-	public static function exists(path: String): Bool;
-	public static function isDir(path: String): Bool;
-	public static function isReadOnly(path: String): Bool;
-	public static function getDrive(path: String): String;
-	public static function getSize(path: String): Int;
-	public static function getFreeSpace(path: String): Int;
-	public static function makeDir(path: String): Void;
-	public static function move(from: String, to: String): Void;
-	public static function copy(from: String, to: String): Void;
-	public static function delete(path: String): Void;
-	public static function combine(base: String, part: String): String;
-	public static function open(path: String, mode: OpenFileMode): FileHandle;
-	public static function find(pattern: String): Table<Int, String>;
-	public static function getDir(path: String): String;
+	static function list(path:String):Table<Int, String>;
+	static function exists(path:String):Bool;
+	static function isDir(path:String):Bool;
+	static function isReadOnly(path:String):Bool;
+	static function getDrive(path:String):String;
+	static function getSize(path:String):Int;
+	static function getFreeSpace(path:String):Int;
+	static function makeDir(path:String):Void;
+	static function move(from:String, to:String):Void;
+	static function copy(from:String, to:String):Void;
+	static function delete(path:String):Void;
+	static function combine(base:String, part:String):String;
+	static function open(path:String, mode:OpenFileMode):FileHandle;
+	static function find(pattern:String):Table<Int, String>;
+	static function getDir(path:String):String;
 	// todo: complete()
 }

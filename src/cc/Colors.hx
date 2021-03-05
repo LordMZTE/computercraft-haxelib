@@ -6,24 +6,24 @@ typedef Color = Int;
 
 @:native("colors")
 extern class Colors {
-	public static function combine(colors: Rest<Color>): Color;
-	public static function subtract(from: Color, colors: Rest<Color>): Color;
-	public static function test(it: Color, check: Color): Bool;
+	static function combine(colors:Rest<Color>):Color;
+	static function subtract(from:Color, colors:Rest<Color>):Color;
+	static function test(it:Color, check:Color):Bool;
 
-	public static var white: Color;
-	public static var orange: Color;
-	public static var magenta: Color;
-	public static var lightBlue: Color;
-	public static var yellow: Color;
-	public static var lime: Color;
-	public static var pink: Color;
-	public static var gray: Color;
-	public static var lightGray: Color;
-	public static var cyan: Color;
-	public static var purple: Color;
-	public static var blue: Color;
-	public static var brown: Color;
-	public static var green: Color;
-	public static var red: Color;
-	public static var black: Color;
+	static var white:Color;
+	static var orange:Color;
+	static var magenta:Color;
+	static var lightBlue:Color;
+	static var yellow:Color;
+	static var lime:Color;
+	static var pink:Color;
+	static var gray:Color;
+	static var lightGray:Color;
+	static var cyan:Color;
+	static var purple:Color;
+	static var blue:Color;
+	static var brown:Color;
+	static var green:Color;
+	static var red:Color;
+	static var black:Color;
 }
